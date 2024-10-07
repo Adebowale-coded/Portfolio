@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { motion } from "framer-motion"
 import Navbar from '../components/Navbar'
 import bg from "../assets/imgs/darkImg.jpg"
 import portfolioImg from "../assets/imgs/coding.jpg"
@@ -25,6 +26,8 @@ import Picture from "../assets/imgs/Picture.png"
 import img1 from "../assets/imgs/port1.png"
 import icon from "../assets/imgs/Icon.png"
 import whatsappImg from "../assets/imgs/whatsappImg.png"
+import engraced from "../assets/imgs/engraced.png"
+import figma from "../assets/imgs/figma.png"
 
 const Home = () => {
 
@@ -74,35 +77,51 @@ const Home = () => {
     <>
       <Navbar bg={navbarBg ? 'bg-[#333]' : 'bg-transparent'} />
       <section className=' h-screen bg-cover bg-center bg-dark-background text-center text-white pt-[250px] lg:pt-[250px] leading-[45px] lg:leading-[70px] font-[poppins]'>
-        <span className='text-[30px] lg:text-[60px] font-[100] '>Hello, I am</span>
-        <h1 className='text-[35px] lg:text-[80px] font-[1000] text-[#66fcf1] '>Adeoti Adebowale.</h1>
-        <p className='font-[300] '>fRoNt EnD dEvElOpEr | dESiGnEr </p>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ amount: 0.5 }}
+        >
+          <span className='text-[30px] lg:text-[60px] font-[100] '>Hello, I am</span>
+          <h1 className='text-[35px] lg:text-[80px] font-[1000] text-[#66fcf1] '>Adeoti Adebowale.</h1>
+          <p className='font-[300] '>fRoNt EnD dEvElOpEr | dESiGnEr </p>
 
-        <div className='flex justify-center items-center p-[4px] bg-[#333] w-[100px] mx-auto rounded-[20px]'>
-          <a href="https://github.com/Adebowale-coded"><img src={github} alt="" className='h-[30px]' /></a>
-          <a href="https://www.linkedin.com/in/adeotiadebowale/"><img src={Linkedin} alt="" className='h-[20px]' /></a>
-          <a href="https://www.behance.net/adebowaleadeoti#"><img src={Behance} alt="" className='h-[35px]' /></a>
-        </div>
+          <div className='flex justify-center items-center p-[4px] bg-[#333] w-[100px] mx-auto rounded-[20px]'>
+            <a href="https://github.com/Adebowale-coded"><img src={github} alt="" className='h-[30px]' /></a>
+            <a href="https://www.linkedin.com/in/adeotiadebowale/"><img src={Linkedin} alt="" className='h-[20px]' /></a>
+            <a href="https://www.behance.net/adebowaleadeoti#"><img src={Behance} alt="" className='h-[35px]' /></a>
+          </div>
+        </motion.div>
+
       </section>
 
 
       <section className='bg-[#222] pt-[50px] justify-center font-[poppins]'>
-        <div className='flex justify-center pb-[20px]'>
-          <label className='text-[13px] text-white p-[13px] bg-[#333] rounded-[25px] font-[1000]'>About Me</label>
-        </div>
-
-        <div className='leading-[25px] px-[20px] md:px-[50px] lg:px-[180px] text-center'>
-          <span className='text-white text-center text-[16px] '>
-            As a young professional in the dynamic field of technology, I am driven by a passion for innovation and a
-            commitment to making a meaningful impact. My journey in the tech industry has been characterized by
-            continuous learning, adaptability, and a relentless pursuit of excellence. Committed to staying abreast of
-            emerging technologies, contributing to technological excellence, and driving business growth.
-          </span>
-          <div className='py-[32px] '>
-            <button className='bg-[#66fcf1] p-[10px] text-center items-center'>Download CV</button>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ amount: 0.5 }}
+        >
+          <div className='flex justify-center pb-[20px]'>
+            <label className='text-[13px] text-white p-[13px] bg-[#333] rounded-[25px] font-[1000]'>About Me</label>
           </div>
 
-        </div>
+          <div className='leading-[25px] px-[20px] md:px-[50px] lg:px-[180px] text-center'>
+            <span className='text-white text-center text-[16px] '>
+              As a young professional in the dynamic field of technology, I am driven by a passion for innovation and a
+              commitment to making a meaningful impact. My journey in the tech industry has been characterized by
+              continuous learning, adaptability, and a relentless pursuit of excellence. Committed to staying abreast of
+              emerging technologies, contributing to technological excellence, and driving business growth.
+            </span>
+            <div className='py-[32px] '>
+              <button className='bg-[#66fcf1] p-[10px] text-center items-center'>Download CV</button>
+            </div>
+
+          </div>
+        </motion.div>
+
 
       </section>
 
@@ -135,48 +154,62 @@ const Home = () => {
       </section>
 
       <section className=' bg-[#222] font-[poppins] p-[40px]'>
-
         <div className='flex justify-center'>
           <label className='text-[13px] text-white p-[13px] bg-[#333] rounded-[25px] font-[1000]'>Skills</label>
         </div>
 
+        {/* <label htmlFor="" className='text-white flex justify-center pt-[10px]'>The skills, tools and technologies I am really good at:</label> */}
 
-        <div className='flex flex-wrap justify-center items-center pt-[40px] gap-[30px]'>
-          <div className='flex flex-col items-center justify-center gap-[10px]'>
-            <img src={reactLogo} alt="" />
-            <p className='text-white'>React</p>
-          </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ amount: 0.5 }}
+        >
+          <div className='flex flex-wrap justify-center items-center pt-[30px] gap-[30px]'>
+            <div className='flex flex-col items-center justify-center gap-[10px]'>
+              <img src={reactLogo} alt="" />
+              <p className='text-white'>React</p>
+            </div>
 
-          <div className='flex flex-col items-center justify-center gap-[10px]'>
-            <img src={typescriptLogo} alt="" />
-            <p className='text-white'>TypeScript</p>
-          </div>
+            <div className='flex flex-col items-center justify-center gap-[10px]'>
+              <img src={typescriptLogo} alt="" />
+              <p className='text-white'>TypeScript</p>
+            </div>
 
-          <div className='flex flex-col items-center justify-center gap-[10px]'>
-            <img src={tailwindLogo} alt="" />
-            <p className='text-white'>Tailwind</p>
-          </div>
+            <div className='flex flex-col items-center justify-center gap-[10px]'>
+              <img src={tailwindLogo} alt="" />
+              <p className='text-white'>Tailwind</p>
+            </div>
 
-          <div className='flex flex-col items-center justify-center gap-[10px]'>
-            <img src={gitLogo} alt="" />
-            <p className='text-white'>Git</p>
-          </div>
+            <div className='flex flex-col items-center justify-center gap-[10px]'>
+              <img src={gitLogo} alt="" />
+              <p className='text-white'>Git</p>
+            </div>
 
-          <div className='flex flex-col items-center justify-center gap-[10px]'>
-            <img src={PhotoshopLogo} alt="" className='h-[70px]' />
-            <p className='text-white'>Photoshop</p>
-          </div>
+            <div className='flex flex-col items-center justify-center gap-[10px]'>
+              <img src={PhotoshopLogo} alt="" className='h-[70px]' />
+              <p className='text-white'>Photoshop</p>
+            </div>
 
-          <div className='flex flex-col items-center justify-center gap-[10px]'>
-            <img src={illustrator} alt="" className='h-[70px]' />
-            <p className='text-white'>Illustrator</p>
-          </div>
+            <div className='flex flex-col items-center justify-center gap-[10px]'>
+              <img src={illustrator} alt="" className='h-[70px]' />
+              <p className='text-white'>Illustrator</p>
+            </div>
 
-          <div className='flex flex-col items-center justify-center gap-[10px]'>
-            <img src={canva} alt="" className='h-[70px]' />
-            <p className='text-white'>Canva</p>
+            <div className='flex flex-col items-center justify-center gap-[10px]'>
+              <img src={canva} alt="" className='h-[70px]' />
+              <p className='text-white'>Canva</p>
+            </div>
+
+            <div className='flex flex-col items-center justify-center gap-[10px]'>
+              <img src={figma} alt="" className='h-[70px]' />
+              <p className='text-white'>Figma</p>
+            </div>
           </div>
-        </div>
+        </motion.div>
+
+
       </section>
 
       <section className=' bg-[#222] font-[poppins] p-[40px]'>
@@ -211,14 +244,17 @@ const Home = () => {
             </div>
 
             <div className='p-[10px] flex pt-[20px] gap-[10px]'>
-              <label htmlFor="" className='text-white'>Preview</label>
-              <a href=""><img src={icon} alt="" /></a>
+              <a href="https://courseweb-beryl.vercel.app/"><label htmlFor="" className='text-white cursor-pointer'>Preview</label></a>
+              <a href="https://courseweb-beryl.vercel.app/"><img src={icon} alt="" /></a>
             </div>
           </div>
         </div>
 
 
         <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
+          <div className="flex justify-center xl:justify-start md:justify-start">
+            <img src={whatsappImg} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
+          </div>
 
           <div className='flex flex-col'>
             <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>Whatsapp Landing Page</h2>
@@ -237,14 +273,42 @@ const Home = () => {
             </div>
 
             <div className='p-[10px] flex pt-[20px] gap-[10px]'>
-              <label htmlFor="" className='text-white'>Preview</label>
-              <a href=""><img src={icon} alt="" /></a>
+              <a href="https://whatsapp-landing-page.vercel.app/"><label htmlFor="" className='text-white cursor-pointer'>Preview</label></a>
+              <a href="https://whatsapp-landing-page.vercel.app/"><img src={icon} alt="" /></a>
             </div>
           </div>
 
-          <div className="flex justify-center md:justify-start">
-            <img src={whatsappImg} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
+
+        </div>
+
+        <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
+          <div className="flex justify-center xl:justify-start md:justify-start">
+            <img src={engraced} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
           </div>
+
+          <div className='flex flex-col'>
+            <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>The Engraced Foundation</h2>
+
+            <p className='text-[14px] text-[#fff] mb-[20px]'>
+              A dynamic church website designed to welcome visitors and provide information on weekly sermons,
+              worship services, and events, fostering a spiritual community in Canada.
+            </p>
+
+            <div className='flex flex-wrap gap-[10px]'>
+              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>React</span>
+              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Typescript</span>
+              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>TailwindCSS</span>
+              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Figma</span>
+              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Git</span>
+            </div>
+
+            <div className='p-[10px] flex pt-[20px] gap-[10px]'>
+              <label htmlFor="" className='text-white cursor-pointer'>Preview</label>
+              <a href="https://theengracedfoundation.org/"><img src={icon} alt="" /></a>
+            </div>
+          </div>
+
+
         </div>
 
 

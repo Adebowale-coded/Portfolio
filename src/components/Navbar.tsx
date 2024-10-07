@@ -20,7 +20,6 @@ const Navbar = ({bg}:props) => {
           <ul className={`flex flex-col lg:flex-row md:flex-row gap-[50px] justify-center p-[30px] font-[300] transition-all duration-300 ease-in-out bg-black lg:bg-transparent ${navClicked ? 'translate-y-0' : 'translate-y-[-500px] lg:translate-y-0 md:translate-y-0'}`}>
               <li>HOME</li>
               <li>PORTFOLIO</li>
-              <li>RESUME</li>
               <li>ABOUT</li>
               <li>CONTACT</li>
             </ul>
