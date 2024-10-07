@@ -255,8 +255,14 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </motion.div>
 
-
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ amount: 0.5 }}
+        >
           <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
             <div className="flex justify-center xl:justify-start md:justify-start">
               <img src={whatsappImg} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
@@ -286,7 +292,15 @@ const Home = () => {
 
 
           </div>
+        </motion.div>
 
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ amount: 0.5 }}
+        >
           <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
             <div className="flex justify-center xl:justify-start md:justify-start">
               <img src={engraced} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
@@ -316,7 +330,7 @@ const Home = () => {
 
 
           </div>
-        </motion.div>
+      </motion.div>
 
 
 
