@@ -222,94 +222,102 @@ const Home = () => {
           <a href='#' className='text-white '>Coding</a>
         </div>
 
-        <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
-          <div className="flex justify-center md:justify-start">
-            <img src={img1} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
-          </div>
-
-          <div className='flex flex-col'>
-            <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>MyCourse.io</h2>
-
-            <p className='text-[14px] text-[#fff] mb-[20px]'>
-              A responsive interface for an online learning platform that encourages users to expand their knowledge
-              through an intuitive and engaging design.
-            </p>
-
-            <div className='flex flex-wrap gap-[10px]'>
-              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>React</span>
-              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Git</span>
-              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Typescript</span>
-              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>TailwindCSS</span>
-              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Figma</span>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ amount: 0.5 }}
+        >
+          <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
+            <div className="flex justify-center md:justify-start">
+              <img src={img1} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
             </div>
 
-            <div className='p-[10px] flex pt-[20px] gap-[10px]'>
-              <a href="https://courseweb-beryl.vercel.app/"><label htmlFor="" className='text-white cursor-pointer'>Preview</label></a>
-              <a href="https://courseweb-beryl.vercel.app/"><img src={icon} alt="" /></a>
-            </div>
-          </div>
-        </div>
+            <div className='flex flex-col'>
+              <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>MyCourse.io</h2>
 
+              <p className='text-[14px] text-[#fff] mb-[20px]'>
+                A responsive interface for an online learning platform that encourages users to expand their knowledge
+                through an intuitive and engaging design.
+              </p>
 
-        <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
-          <div className="flex justify-center xl:justify-start md:justify-start">
-            <img src={whatsappImg} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
-          </div>
+              <div className='flex flex-wrap gap-[10px]'>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>React</span>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Git</span>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Typescript</span>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>TailwindCSS</span>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Figma</span>
+              </div>
 
-          <div className='flex flex-col'>
-            <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>Whatsapp Landing Page</h2>
-
-            <p className='text-[14px] text-[#fff] mb-[20px]'>
-              A sleek and modern landing page designed for WhatsApp, highlighting its key features and benefits.
-              The layout is optimized for user engagement,
-            </p>
-
-            <div className='flex flex-wrap gap-[10px]'>
-              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>React</span>
-              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Typescript</span>
-              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>TailwindCSS</span>
-              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Figma</span>
-              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Git</span>
-            </div>
-
-            <div className='p-[10px] flex pt-[20px] gap-[10px]'>
-              <a href="https://whatsapp-landing-page.vercel.app/"><label htmlFor="" className='text-white cursor-pointer'>Preview</label></a>
-              <a href="https://whatsapp-landing-page.vercel.app/"><img src={icon} alt="" /></a>
+              <div className='p-[10px] flex pt-[20px] gap-[10px]'>
+                <a href="https://courseweb-beryl.vercel.app/"><label htmlFor="" className='text-white cursor-pointer'>Preview</label></a>
+                <a href="https://courseweb-beryl.vercel.app/"><img src={icon} alt="" /></a>
+              </div>
             </div>
           </div>
 
 
-        </div>
-
-        <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
-          <div className="flex justify-center xl:justify-start md:justify-start">
-            <img src={engraced} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
-          </div>
-
-          <div className='flex flex-col'>
-            <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>The Engraced Foundation</h2>
-
-            <p className='text-[14px] text-[#fff] mb-[20px]'>
-              A dynamic church website designed to welcome visitors and provide information on weekly sermons,
-              worship services, and events, fostering a spiritual community in Canada.
-            </p>
-
-            <div className='flex flex-wrap gap-[10px]'>
-              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>React</span>
-              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Typescript</span>
-              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>TailwindCSS</span>
-              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Figma</span>
-              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Git</span>
+          <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
+            <div className="flex justify-center xl:justify-start md:justify-start">
+              <img src={whatsappImg} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
             </div>
 
-            <div className='p-[10px] flex pt-[20px] gap-[10px]'>
-              <label htmlFor="" className='text-white cursor-pointer'>Preview</label>
-              <a href="https://theengracedfoundation.org/"><img src={icon} alt="" /></a>
+            <div className='flex flex-col'>
+              <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>Whatsapp Landing Page</h2>
+
+              <p className='text-[14px] text-[#fff] mb-[20px]'>
+                A sleek and modern landing page designed for WhatsApp, highlighting its key features and benefits.
+                The layout is optimized for user engagement,
+              </p>
+
+              <div className='flex flex-wrap gap-[10px]'>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>React</span>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Typescript</span>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>TailwindCSS</span>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Figma</span>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Git</span>
+              </div>
+
+              <div className='p-[10px] flex pt-[20px] gap-[10px]'>
+                <a href="https://whatsapp-landing-page.vercel.app/"><label htmlFor="" className='text-white cursor-pointer'>Preview</label></a>
+                <a href="https://whatsapp-landing-page.vercel.app/"><img src={icon} alt="" /></a>
+              </div>
             </div>
+
+
           </div>
 
+          <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
+            <div className="flex justify-center xl:justify-start md:justify-start">
+              <img src={engraced} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
+            </div>
 
-        </div>
+            <div className='flex flex-col'>
+              <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>The Engraced Foundation</h2>
+
+              <p className='text-[14px] text-[#fff] mb-[20px]'>
+                A dynamic church website designed to welcome visitors and provide information on weekly sermons,
+                worship services, and events, fostering a spiritual community in Canada.
+              </p>
+
+              <div className='flex flex-wrap gap-[10px]'>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>React</span>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Typescript</span>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>TailwindCSS</span>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Figma</span>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Git</span>
+              </div>
+
+              <div className='p-[10px] flex pt-[20px] gap-[10px]'>
+                <label htmlFor="" className='text-white cursor-pointer'>Preview</label>
+                <a href="https://theengracedfoundation.org/"><img src={icon} alt="" /></a>
+              </div>
+            </div>
+
+
+          </div>
+        </motion.div>
+
 
 
       </section>
