@@ -11,7 +11,20 @@ import Path from "../assets/imgs/Path.png"
 import Oval from "../assets/imgs/Oval.png"
 import Shape from "../assets/imgs/Shape.png"
 import Project from '../components/Project'
-
+import reactLogo from "../assets/imgs/icon-react.png"
+import tailwindLogo from "../assets/imgs/icon-tailwindcss.png"
+import typescriptLogo from "../assets/imgs/icon-typescript.png"
+import gitLogo from "../assets/imgs/icon-git.png"
+import PhotoshopLogo from "../assets/imgs/photoshop-logo.png"
+import illustrator from "../assets/imgs/illustrator.png"
+import canva from "../assets/imgs/canva.png"
+import github from "../assets/imgs/git.png"
+import Linkedin from "../assets/imgs/linkedin.png"
+import Behance from "../assets/imgs/behance.png"
+import Picture from "../assets/imgs/Picture.png"
+import img1 from "../assets/imgs/port1.png"
+import icon from "../assets/imgs/Icon.png"
+import whatsappImg from "../assets/imgs/whatsappImg.png"
 
 const Home = () => {
 
@@ -59,16 +72,25 @@ const Home = () => {
   }
   return (
     <>
-      <Navbar bg={navbarBg ? 'bg-[#333]' : 'bg-transparent'}/>
-      <section className=' h-screen bg-cover bg-center bg-dark-background text-center text-white pt-[250px] lg:pt-[250px] leading-[45px] lg:leading-[85px] font-[poppins]'>
-        <span className='text-[30px] lg:text-[60px] font-[100] '>Hello, I'm</span>
-        <h1 className='text-[35px] lg:text-[80px] font-[1000] text-[#66fcf1]'>Adeoti Adebowale.</h1>
-        <p className='font-[300]'>fRoNt EnD dEvElOpEr | dESiGnEr </p>
+      <Navbar bg={navbarBg ? 'bg-[#333]' : 'bg-transparent'} />
+      <section className=' h-screen bg-cover bg-center bg-dark-background text-center text-white pt-[250px] lg:pt-[250px] leading-[45px] lg:leading-[70px] font-[poppins]'>
+        <span className='text-[30px] lg:text-[60px] font-[100] '>Hello, I am</span>
+        <h1 className='text-[35px] lg:text-[80px] font-[1000] text-[#66fcf1] '>Adeoti Adebowale.</h1>
+        <p className='font-[300] '>fRoNt EnD dEvElOpEr | dESiGnEr </p>
+
+        <div className='flex justify-center items-center p-[4px] bg-[#333] w-[100px] mx-auto rounded-[20px]'>
+          <a href="https://github.com/Adebowale-coded"><img src={github} alt="" className='h-[30px]' /></a>
+          <a href="https://www.linkedin.com/in/adeotiadebowale/"><img src={Linkedin} alt="" className='h-[20px]' /></a>
+          <a href="https://www.behance.net/adebowaleadeoti#"><img src={Behance} alt="" className='h-[35px]' /></a>
+        </div>
       </section>
 
 
       <section className='bg-[#222] pt-[50px] justify-center font-[poppins]'>
-        <h1 className='text-center text-[30px] text-white pb-[24px]'>About <strong className='font-[1100]'>Me</strong> </h1>
+        <div className='flex justify-center pb-[20px]'>
+          <label className='text-[13px] text-white p-[13px] bg-[#333] rounded-[25px] font-[1000]'>About Me</label>
+        </div>
+
         <div className='leading-[25px] px-[20px] md:px-[50px] lg:px-[180px] text-center'>
           <span className='text-white text-center text-[16px] '>
             As a young professional in the dynamic field of technology, I am driven by a passion for innovation and a
@@ -86,7 +108,11 @@ const Home = () => {
 
 
       <section className=' bg-[#222] font-[poppins] p-[40px]'>
-        <h1 className='text-center text-[30px] text-white'>My <strong className='font-[1100]'>Services</strong> </h1>
+
+        <div className='flex justify-center'>
+          <label className='text-[13px] text-white p-[13px] bg-[#333] rounded-[25px] font-[1000]'>My Services</label>
+        </div>
+
 
         <div className='justify-center grid grid-cols-1 md:w-[75%] lg:grid-cols-3  gap-[20px] text-left mx-auto text-white pt-[50px]'>
           <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[7px]'>
@@ -108,43 +134,120 @@ const Home = () => {
         </div>
       </section>
 
-      {/* <section className='h-screen bg-[#222] font-[poppins] p-[40px]'>
-        <h1 className='text-center text-[30px] text-white'>My <strong className='font-[1100]'>Resume</strong> </h1>
+      <section className=' bg-[#222] font-[poppins] p-[40px]'>
 
-        <div className='justify-center grid grid-cols-2 gap-[20px] text-left mx-auto text-white pt-[50px]'>
-          <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[7px]'>
-            <span className='mb-[10px] font-[700] text-[#fff]'>February - Present</span>
-            <h3 className='text-[#66fcf1] text-[20px]'>Frontend Development Intern</h3>
-            <p></p>
+        <div className='flex justify-center'>
+          <label className='text-[13px] text-white p-[13px] bg-[#333] rounded-[25px] font-[1000]'>Skills</label>
+        </div>
+
+
+        <div className='flex flex-wrap justify-center items-center pt-[40px] gap-[30px]'>
+          <div className='flex flex-col items-center justify-center gap-[10px]'>
+            <img src={reactLogo} alt="" />
+            <p className='text-white'>React</p>
           </div>
-          <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[7px]'>
-            <span className='mb-[10px] font-[700] text-[#fff]'>February - Present</span>
-            <h3 className='text-[#66fcf1] text-[20px]'>Asst. Creative Director</h3>
-            <li>Demonstrated strong communication skills in conveying client requirements to artisans and vice versa.</li>
-            <li>Monitored and tracked the progress of ongoing projects to ensure adherence to timelines and milestones</li>
-            <li>Conceptualized and produced engaging video content for Instagram Reels to promote products/services.</li>
-            <li> Created visually compelling and engaging graphic designs for weekly social media posts.</li>
+
+          <div className='flex flex-col items-center justify-center gap-[10px]'>
+            <img src={typescriptLogo} alt="" />
+            <p className='text-white'>TypeScript</p>
+          </div>
+
+          <div className='flex flex-col items-center justify-center gap-[10px]'>
+            <img src={tailwindLogo} alt="" />
+            <p className='text-white'>Tailwind</p>
+          </div>
+
+          <div className='flex flex-col items-center justify-center gap-[10px]'>
+            <img src={gitLogo} alt="" />
+            <p className='text-white'>Git</p>
+          </div>
+
+          <div className='flex flex-col items-center justify-center gap-[10px]'>
+            <img src={PhotoshopLogo} alt="" className='h-[70px]' />
+            <p className='text-white'>Photoshop</p>
+          </div>
+
+          <div className='flex flex-col items-center justify-center gap-[10px]'>
+            <img src={illustrator} alt="" className='h-[70px]' />
+            <p className='text-white'>Illustrator</p>
+          </div>
+
+          <div className='flex flex-col items-center justify-center gap-[10px]'>
+            <img src={canva} alt="" className='h-[70px]' />
+            <p className='text-white'>Canva</p>
           </div>
         </div>
-      </section> */}
+      </section>
 
       <section className=' bg-[#222] font-[poppins] p-[40px]'>
-        <h1 className='text-center text-[30px] text-white'>Featured <strong className='font-[1100]'>Portfolio</strong> </h1>
+        <div className='flex justify-center pb-[20px]'>
+          <label className='text-[13px] text-white p-[13px] bg-[#333] rounded-[25px] font-[1000]'>Works</label>
+        </div>
         <div className='text-center gap-[30px] flex justify-center mt-[20px]'>
           <a href='#' onClick={AllclickHandler} className={`${active.All && 'text-[#66fcf1]'} font-[1000]`}>All</a>
           <a href='#' onClick={AllclickHandler} className='text-white '>Design</a>
           <a href='#' className='text-white '>Coding</a>
         </div>
 
-        <div className='justify-center grid lg:grid-cols-3 gap-[20px] text-center text-white pt-[50px]'>
-          <Project imgSrc={portfolio} projectName="WhatsApp Redesign" />
-          <Project imgSrc={portfolio} projectName="Portfolio Website" />
-          <Project imgSrc={portfolio} projectName="Creative Portfolio" />
+        <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
+          <div className="flex justify-center md:justify-start">
+            <img src={img1} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
+          </div>
 
-          <Project imgSrc={portfolio} projectName="WhatsApp Redesign" />
-          <Project imgSrc={portfolio} projectName="Portfolio Website" />
-          <Project imgSrc={portfolio} projectName="Creative Portfolio" />
+          <div className='flex flex-col'>
+            <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>MyCourse.io</h2>
+
+            <p className='text-[14px] text-[#fff] mb-[20px]'>
+              A responsive interface for an online learning platform that encourages users to expand their knowledge
+              through an intuitive and engaging design.
+            </p>
+
+            <div className='flex flex-wrap gap-[10px]'>
+              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>React</span>
+              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Git</span>
+              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Typescript</span>
+              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>TailwindCSS</span>
+              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Figma</span>
+            </div>
+
+            <div className='p-[10px] flex pt-[20px] gap-[10px]'>
+              <label htmlFor="" className='text-white'>Preview</label>
+              <a href=""><img src={icon} alt="" /></a>
+            </div>
+          </div>
         </div>
+
+
+        <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
+
+          <div className='flex flex-col'>
+            <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>Whatsapp Landing Page</h2>
+
+            <p className='text-[14px] text-[#fff] mb-[20px]'>
+              A sleek and modern landing page designed for WhatsApp, highlighting its key features and benefits.
+              The layout is optimized for user engagement,
+            </p>
+
+            <div className='flex flex-wrap gap-[10px]'>
+              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>React</span>
+              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Typescript</span>
+              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>TailwindCSS</span>
+              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Figma</span>
+              <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Git</span>
+            </div>
+
+            <div className='p-[10px] flex pt-[20px] gap-[10px]'>
+              <label htmlFor="" className='text-white'>Preview</label>
+              <a href=""><img src={icon} alt="" /></a>
+            </div>
+          </div>
+
+          <div className="flex justify-center md:justify-start">
+            <img src={whatsappImg} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
+          </div>
+        </div>
+
+
       </section>
 
       <section className='bg-[#222] font-[poppins] p-[40px]'>
@@ -171,22 +274,23 @@ const Home = () => {
           </div>
 
           <div className='lg:w-[50%]'>
-            <h3 className='text-[#66fcf1]'>CONTACT</h3>
-            <h2 className='text-[35px] text-[#fff]'>Contact me</h2>
+            <div className='flex pb-[20px]'>
+              <label className='text-[13px] text-white p-[13px] bg-[#333] rounded-[25px] font-[1000]'>Contact Me</label>
+            </div>
             <p className='text-[#fff] pt-[10px]'>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
             <div className='pt-[30px] flex gap-[20px]'>
               <img src={Path} alt="" className='h-[23px]' />
-              <p className='text-[#fff]'>Lagos, Nigeria</p>
+              <p className='text-[#fff] xl:text-[15px] lg:text-[15px] text-[12px]'>Lagos, Nigeria</p>
             </div>
 
             <div className='pt-[30px] flex gap-[20px]'>
               <img src={Path} alt="" className='h-[23px]' />
-              <p className='text-[#fff]'>(+234) 902-9663-936</p>
+              <p className='text-[#fff] xl:text-[15px] lg:text-[15px] text-[12px]'>(+234) 902-9663-936</p>
             </div>
 
             <div className='pt-[30px] flex gap-[20px]'>
               <img src={Shape} alt="" className=' h-[23px]' />
-              <p className='text-[#fff]'>adeotiadebowale@gmail.com</p>
+              <p className='text-[#fff] xl:text-[15px] lg:text-[15px] text-[12px]'>adeotiadebowale@gmail.com</p>
             </div>
 
           </div>
