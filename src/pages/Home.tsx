@@ -28,6 +28,8 @@ import icon from "../assets/imgs/Icon.png"
 import whatsappImg from "../assets/imgs/whatsappImg.png"
 import engraced from "../assets/imgs/engraced.png"
 import figma from "../assets/imgs/figma.png"
+import inspira from "../assets/imgs/inspiracomp.png"
+import vogue from "../assets/imgs/vogcomp.png"
 
 const Home = () => {
 
@@ -97,7 +99,7 @@ const Home = () => {
       </section>
 
 
-      <section className='bg-[#222] pt-[50px] justify-center font-[poppins]'>
+      <section className='bg-[#222] pt-[50px] justify-center font-[poppins] border-b border-[#333]'>
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -116,7 +118,7 @@ const Home = () => {
               emerging technologies, contributing to technological excellence, and driving business growth.
             </span>
             <div className='py-[32px] '>
-              <button className='bg-[#66fcf1] p-[10px] text-center items-center'>Download CV</button>
+              <button className='bg-[#66fcf1] p-[10px] text-center items-center rounded-[20px] font-[500]'>Download CV</button>
             </div>
 
           </div>
@@ -126,7 +128,7 @@ const Home = () => {
       </section>
 
 
-      <section className=' bg-[#222] font-[poppins] p-[40px]'>
+      <section className=' bg-[#222] font-[poppins] p-[40px] border-b border-[#333]'>
 
         <div className='flex justify-center'>
           <label className='text-[13px] text-white p-[13px] bg-[#333] rounded-[25px] font-[1000]'>My Services</label>
@@ -134,18 +136,18 @@ const Home = () => {
 
 
         <div className='justify-center grid grid-cols-1 md:w-[75%] lg:grid-cols-3  gap-[20px] text-left mx-auto text-white pt-[50px]'>
-          <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[7px]'>
+          <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[20px]'>
             <img src={phone} alt="smartphone--v1" className='mb-[10px]' />
             <h3 className='text-[#66fcf1] text-[20px]'>Design</h3>
             <p className='text-[13px]'>Specializing in creative graphic design.</p>
           </div>
-          <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[7px]'>
+          <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[20px]'>
             <img src={web} alt="" className='mb-[10px]' />
             <h3 className='text-[#66fcf1] text-[20px]'>Web Development</h3>
             <p className='text-[13px]'>Designing dynamic visuals for web development</p>
           </div>
 
-          <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[7px]'>
+          <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[20px]'>
             <img src={phone} alt="" className='mb-[10px]' />
             <h3 className='text-[#66fcf1] text-[20px]'>Branding</h3>
             <p className='text-[13px]'>Designing dynamic visuals for web development</p>
@@ -153,12 +155,10 @@ const Home = () => {
         </div>
       </section>
 
-      <section className=' bg-[#222] font-[poppins] p-[40px]'>
+      <section className=' bg-[#222] font-[poppins] p-[40px] border-b border-[#333]'>
         <div className='flex justify-center'>
           <label className='text-[13px] text-white p-[13px] bg-[#333] rounded-[25px] font-[1000]'>Skills</label>
         </div>
-
-        {/* <label htmlFor="" className='text-white flex justify-center pt-[10px]'>The skills, tools and technologies I am really good at:</label> */}
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -330,31 +330,103 @@ const Home = () => {
 
 
           </div>
-      </motion.div>
+        </motion.div>
+
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ amount: 0.5 }}
+        >
+          <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
+            <div className="flex justify-center xl:justify-start md:justify-start">
+              <img src={inspira} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
+            </div>
+
+            <div className='flex flex-col'>
+              <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>Inspira College Social Media Flyer</h2>
+
+              <p className='text-[14px] text-[#fff] mb-[20px]'>
+                Both sections incorporate the school's branding with a modern, visually appealing design,
+                encouraging engagement with the school's social media platforms through subtle icons and
+                handles at the bottom. The flyer effectively combines motivation and inspiration, targeting
+                students in a visually striking way
+              </p>
+
+              <div className='flex flex-wrap gap-[10px]'>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Photoshop</span>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Illustrator</span>
+              </div>
+
+              <div className='p-[10px] flex pt-[20px] gap-[10px]'>
+                <label htmlFor="" className='text-white cursor-pointer'>Preview</label>
+                <a href="https://www.behance.net/gallery/177236121/Social-Media-Posts-for-Inspira-College"><img src={icon} alt="" /></a>
+              </div>
+            </div>
+
+
+          </div>
+        </motion.div>
+
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ amount: 0.5 }}
+        >
+          <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
+            <div className="flex justify-center xl:justify-start md:justify-start">
+              <img src={vogue} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
+            </div>
+
+            <div className='flex flex-col'>
+              <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>Vogue Inspired Magazine Cover</h2>
+
+              <p className='text-[14px] text-[#fff] mb-[20px]'>
+                The image is a Vogue magazine cover featuring a close-up portrait of a model, highlighting beauty and
+                fashion for the Fall Fashion Preview of October 2023.
+              </p>
+
+              <div className='flex flex-wrap gap-[10px]'>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Photoshop</span>
+                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Illustrator</span>
+              </div>
+
+              <div className='p-[10px] flex pt-[20px] gap-[10px]'>
+                <label htmlFor="" className='text-white cursor-pointer'>Preview</label>
+                <a href="https://www.behance.net/gallery/177236121/Social-Media-Posts-for-Inspira-College"><img src={icon} alt="" /></a>
+              </div>
+            </div>
+
+
+          </div>
+        </motion.div>
 
 
 
       </section>
 
-      <section className='bg-[#222] font-[poppins] p-[40px]'>
-        <div className='flex flex-col lg:flex-row gap-[20px]'>
-          <div className='bg-[#333] p-[20px] lg:w-[50%]'>
+      <section className='bg-[#222] font-[poppins] p-[40px] '>
+        <div className='flex flex-col lg:flex-row gap-[20px] max-w-[1000px] mx-auto'>
+          <div className='bg-[#333] p-[20px] lg:w-[50%] rounded-[20px]'>
             <form action="" className='p-[20px]'>
               <h1 className='text-[24px] font-[500] text-[#66fcf1]'>Get In Touch</h1>
               <div className='pt-[12px]'>
-                <input type="text" placeholder='Name' className='p-[15px] w-[100%] border border-black bg-transparent text-[#fff]' />
+                <input type="text" placeholder='Name' className='p-[15px] w-[100%] border border-white rounded-[20px] bg-transparent text-[#fff]' />
               </div>
 
               <div className='pt-[12px]'>
-                <input type="text" placeholder='Email' className='p-[15px] w-[100%] border border-black bg-transparent text-[#fff]' />
+                <input type="text" placeholder='Email' className='p-[15px] w-[100%] border border-white rounded-[20px] bg-transparent text-[#fff]' />
               </div>
 
               <div className='pt-[12px]'>
-                <input type="text" placeholder='Message' className='p-[15px] w-[100%] border border-black bg-transparent text-[#fff]' />
+                <input type="text" placeholder='Message' className='p-[15px] w-[100%] border border-white rounded-[20px] bg-transparent text-[#fff]' />
               </div>
 
               <div className='pt-[20px]'>
-                <button className='bg-[#66fcf1] p-[15px] font-[1100px]'>Submit</button>
+                <button className='bg-[#66fcf1] p-[15px] font-[1100px] rounded-[20px]'>Submit</button>
               </div>
             </form>
           </div>
@@ -365,17 +437,17 @@ const Home = () => {
             </div>
             <p className='text-[#fff] pt-[10px]'>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
             <div className='pt-[30px] flex gap-[20px]'>
-              <img src={Path} alt="" className='h-[23px]' />
+              <img width="30" height="30" src="https://img.icons8.com/officel/80/marker.png" alt="marker" />
               <p className='text-[#fff] xl:text-[15px] lg:text-[15px] text-[12px]'>Lagos, Nigeria</p>
             </div>
 
-            <div className='pt-[30px] flex gap-[20px]'>
-              <img src={Path} alt="" className='h-[23px]' />
+            <div className='pt-[30px] flex gap-[20px] items-center'>
+              <img width="30" height="30" src="https://img.icons8.com/color/48/apple-phone.png" alt="apple-phone" />
               <p className='text-[#fff] xl:text-[15px] lg:text-[15px] text-[12px]'>(+234) 902-9663-936</p>
             </div>
 
-            <div className='pt-[30px] flex gap-[20px]'>
-              <img src={Shape} alt="" className=' h-[23px]' />
+            <div className='pt-[30px] flex gap-[20px] items-center'>
+              <img width="30" height="30" src="https://img.icons8.com/fluency/30/new-post.png" alt="new-post" />
               <p className='text-[#fff] xl:text-[15px] lg:text-[15px] text-[12px]'>adeotiadebowale@gmail.com</p>
             </div>
 
