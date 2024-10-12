@@ -144,13 +144,13 @@ const Home = () => {
           <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[20px] hover:bg-[#161313] hover:scale-105 transition duration-300 ease-in-out'>
             <img width="30" height="30" src="https://img.icons8.com/fluency/30/web.png" alt="web" />
             <h3 className='text-[#66fcf1] text-[20px] pt-[10px]'>Web Development</h3>
-            <p className='text-[13px]'>Designing dynamic visuals for web development</p>
+            <p className='text-[13px]'>Develop dynamic visuals that enhance User interaction.</p>
           </div>
 
           <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[20px] hover:bg-[#161313] hover:scale-105 transition duration-300 ease-in-out'>
             <img width="30" height="30" src="https://img.icons8.com/stickers/50/tag.png" alt="tag" />
             <h3 className='text-[#66fcf1] text-[20px] pt-[10px]'>Branding</h3>
-            <p className='text-[13px]'>Designing dynamic visuals for web development</p>
+            <p className='text-[13px]'>Create dynamic visuals that define and elevate your brand identity.</p>
           </div>
         </div>
       </section>
@@ -435,7 +435,7 @@ const Home = () => {
             <div className='flex pb-[20px]'>
               <label className='text-[13px] text-white p-[13px] bg-[#333] rounded-[25px] font-[1000]'>Contact Me</label>
             </div>
-            <p className='text-[#fff] pt-[10px]'>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
+            <p className='text-[#fff] pt-[10px]'>Feel free to reach out, and let's create something amazing together!</p>
             <div className='pt-[30px] flex gap-[20px] items-center'>
               <img width="30" height="30" src="https://img.icons8.com/officel/80/marker.png" alt="marker" />
               <p className='text-[#fff] xl:text-[15px] lg:text-[15px] text-[12px]'>Lagos, Nigeria</p>
