@@ -136,20 +136,20 @@ const Home = () => {
 
 
         <div className='justify-center grid grid-cols-1 md:w-[75%] lg:grid-cols-3  gap-[20px] text-left mx-auto text-white pt-[50px]'>
-          <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[20px]'>
-            <img src={phone} alt="smartphone--v1" className='mb-[10px]' />
-            <h3 className='text-[#66fcf1] text-[20px]'>Design</h3>
+          <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[20px] hover:bg-[#161313]  hover:scale-105 transition duration-300 ease-in-out'>
+            <img width="40" height="40" src="https://img.icons8.com/color/48/design--v1.png" alt="design--v1" />
+            <h3 className='text-[#66fcf1] text-[20px] pt-[10px]'>Design</h3>
             <p className='text-[13px]'>Specializing in creative graphic design.</p>
           </div>
-          <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[20px]'>
-            <img src={web} alt="" className='mb-[10px]' />
-            <h3 className='text-[#66fcf1] text-[20px]'>Web Development</h3>
+          <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[20px] hover:bg-[#161313] hover:scale-105 transition duration-300 ease-in-out'>
+            <img width="30" height="30" src="https://img.icons8.com/fluency/30/web.png" alt="web" />
+            <h3 className='text-[#66fcf1] text-[20px] pt-[10px]'>Web Development</h3>
             <p className='text-[13px]'>Designing dynamic visuals for web development</p>
           </div>
 
-          <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[20px]'>
-            <img src={phone} alt="" className='mb-[10px]' />
-            <h3 className='text-[#66fcf1] text-[20px]'>Branding</h3>
+          <div className='bg-[#333] p-[30px] border-4 border-transparent rounded-[20px] hover:bg-[#161313] hover:scale-105 transition duration-300 ease-in-out'>
+            <img width="30" height="30" src="https://img.icons8.com/stickers/50/tag.png" alt="tag" />
+            <h3 className='text-[#66fcf1] text-[20px] pt-[10px]'>Branding</h3>
             <p className='text-[13px]'>Designing dynamic visuals for web development</p>
           </div>
         </div>
@@ -436,7 +436,7 @@ const Home = () => {
               <label className='text-[13px] text-white p-[13px] bg-[#333] rounded-[25px] font-[1000]'>Contact Me</label>
             </div>
             <p className='text-[#fff] pt-[10px]'>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
-            <div className='pt-[30px] flex gap-[20px]'>
+            <div className='pt-[30px] flex gap-[20px] items-center'>
               <img width="30" height="30" src="https://img.icons8.com/officel/80/marker.png" alt="marker" />
               <p className='text-[#fff] xl:text-[15px] lg:text-[15px] text-[12px]'>Lagos, Nigeria</p>
             </div>
