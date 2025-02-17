@@ -9,7 +9,7 @@ const Navbar = ({bg}:props) => {
     const handleClick = () => {
       setNavClicked(!navClicked)
     }
-    console.log(navClicked)
+    
   return (
         <>
           <nav className={`h-[84px] top-0 z-10 transition-all duration-300 font-[poppins] text-[#66fcf1] fixed justify-center w-full ${bg}`}>

@@ -30,6 +30,7 @@ import engraced from "../assets/imgs/engraced.png"
 import figma from "../assets/imgs/figma.png"
 import inspira from "../assets/imgs/inspiracomp.png"
 import vogue from "../assets/imgs/vogcomp.png"
+import ProjectData from '../data/data'
 
 const Home = () => {
 
@@ -57,12 +58,27 @@ const Home = () => {
     Coding: false,
   })
 
-  const AllclickHandler = () => {
-    setActive({
+  const [activeSimple, setActiveSimple] = useState('All')
+
+  const simpleChanger = (category:string) => {
+    setActiveSimple(category)
+  };
+
+  const filteredProjects = activeSimple === 'All' ? ProjectData: ProjectData.filter((item) => item.category === activeSimple);
+
+  
+
+
+
+  const AllclickHandler = (name: string) => {
+
+
+    /* setActive({
       All: !active.All,
       Design: false,
-      Coding: false,/* */
+      Coding: false,
     })
+ */
 
     //   setActive((prev) => (
     //     {
@@ -217,192 +233,22 @@ const Home = () => {
           <label className='text-[13px] text-white p-[13px] bg-[#333] rounded-[25px] font-[1000]'>Works</label>
         </div>
         <div className='text-center gap-[30px] flex justify-center mt-[20px]'>
-          <a href='#' onClick={AllclickHandler} className={`${active.All && 'text-[#66fcf1]'} font-[1000]`}>All</a>
-          <a href='#' onClick={AllclickHandler} className='text-white '>Design</a>
-          <a href='#' className='text-white '>Coding</a>
+          <span onClick={() => simpleChanger('All')} className={`${activeSimple === 'All' ? 'text-[#66fcf1] font-[1000]' : 'text-white'}  cursor-pointer`}>All</span>
+          <span onClick={() => simpleChanger('Design')} className={`${activeSimple === 'Design' ? 'text-[#66fcf1] font-[1000]' : 'text-white'}  cursor-pointer`}>Design</span>
+          <span onClick={() => simpleChanger('Coding')} className={`${activeSimple === 'Coding' ? 'text-[#66fcf1] font-[1000]' : 'text-white'}   cursor-pointer`}>Coding</span>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ amount: 0.5 }}
-        >
-          <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
-            <div className="flex justify-center md:justify-start">
-              <img src={img1} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
-            </div>
-
-            <div className='flex flex-col'>
-              <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>MyCourse.io</h2>
-
-              <p className='text-[14px] text-[#fff] mb-[20px]'>
-                A responsive interface for an online learning platform that encourages users to expand their knowledge
-                through an intuitive and engaging design.
-              </p>
-
-              <div className='flex flex-wrap gap-[10px]'>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>React</span>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Git</span>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Typescript</span>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>TailwindCSS</span>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Figma</span>
-              </div>
-
-              <div className='p-[10px] flex pt-[20px] gap-[10px]'>
-                <a href="https://courseweb-beryl.vercel.app/"><label htmlFor="" className='text-white cursor-pointer'>Preview</label></a>
-                <a href="https://courseweb-beryl.vercel.app/"><img src={icon} alt="" /></a>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ amount: 0.5 }}
-        >
-          <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
-            <div className="flex justify-center xl:justify-start md:justify-start">
-              <img src={whatsappImg} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
-            </div>
-
-            <div className='flex flex-col'>
-              <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>Whatsapp Landing Page</h2>
-
-              <p className='text-[14px] text-[#fff] mb-[20px]'>
-                A sleek and modern landing page designed for WhatsApp, highlighting its key features and benefits.
-                The layout is optimized for user engagement,
-              </p>
-
-              <div className='flex flex-wrap gap-[10px]'>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>React</span>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Typescript</span>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>TailwindCSS</span>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Figma</span>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Git</span>
-              </div>
-
-              <div className='p-[10px] flex pt-[20px] gap-[10px]'>
-                <a href="https://whatsapp-landing-page.vercel.app/"><label htmlFor="" className='text-white cursor-pointer'>Preview</label></a>
-                <a href="https://whatsapp-landing-page.vercel.app/"><img src={icon} alt="" /></a>
-              </div>
-            </div>
-
-
-          </div>
-        </motion.div>
-
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ amount: 0.5 }}
-        >
-          <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
-            <div className="flex justify-center xl:justify-start md:justify-start">
-              <img src={engraced} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
-            </div>
-
-            <div className='flex flex-col'>
-              <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>The Engraced Foundation</h2>
-
-              <p className='text-[14px] text-[#fff] mb-[20px]'>
-                A dynamic church website designed to welcome visitors and provide information on weekly sermons,
-                worship services, and events, fostering a spiritual community in Canada.
-              </p>
-
-              <div className='flex flex-wrap gap-[10px]'>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>React</span>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Typescript</span>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>TailwindCSS</span>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Figma</span>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Git</span>
-              </div>
-
-              <div className='p-[10px] flex pt-[20px] gap-[10px]'>
-                <label htmlFor="" className='text-white cursor-pointer'>Preview</label>
-                <a href="https://theengracedfoundation.org/"><img src={icon} alt="" /></a>
-              </div>
-            </div>
-
-
-          </div>
-        </motion.div>
-
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ amount: 0.5 }}
-        >
-          <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
-            <div className="flex justify-center xl:justify-start md:justify-start">
-              <img src={inspira} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
-            </div>
-
-            <div className='flex flex-col'>
-              <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>Inspira College Social Media Flyer</h2>
-
-              <p className='text-[14px] text-[#fff] mb-[20px]'>
-                Both sections incorporate the school's branding with a modern, visually appealing design,
-                encouraging engagement with the school's social media platforms through subtle icons and
-                handles at the bottom. The flyer effectively combines motivation and inspiration, targeting
-                students in a visually striking way
-              </p>
-
-              <div className='flex flex-wrap gap-[10px]'>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Photoshop</span>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Illustrator</span>
-              </div>
-
-              <div className='p-[10px] flex pt-[20px] gap-[10px]'>
-                <label htmlFor="" className='text-white cursor-pointer'>Preview</label>
-                <a href="https://www.behance.net/gallery/177236121/Social-Media-Posts-for-Inspira-College"><img src={icon} alt="" /></a>
-              </div>
-            </div>
-
-
-          </div>
-        </motion.div>
-
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ amount: 0.5 }}
-        >
-          <div className='bg-[#333] grid grid-cols-1 md:grid-cols-2 gap-[15px] mx-auto p-[30px] rounded-[20px] mt-[20px] max-w-[1000px]'>
-            <div className="flex justify-center xl:justify-start md:justify-start">
-              <img src={vogue} alt="Project Image" className='h-auto w-full md:w-auto rounded-lg' />
-            </div>
-
-            <div className='flex flex-col'>
-              <h2 className='text-[18px] font-[500] text-[#66fcf1] mb-[10px]'>Vogue Inspired Magazine Cover</h2>
-
-              <p className='text-[14px] text-[#fff] mb-[20px]'>
-                The image is a Vogue magazine cover featuring a close-up portrait of a model, highlighting beauty and
-                fashion for the Fall Fashion Preview of October 2023.
-              </p>
-
-              <div className='flex flex-wrap gap-[10px]'>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Photoshop</span>
-                <span className='bg-[#444] text-[#fff] px-[10px] py-[5px] rounded-full text-[12px]'>Illustrator</span>
-              </div>
-
-              <div className='p-[10px] flex pt-[20px] gap-[10px]'>
-                <label htmlFor="" className='text-white cursor-pointer'>Preview</label>
-                <a href="https://www.behance.net/gallery/177236121/Social-Media-Posts-for-Inspira-College"><img src={icon} alt="" /></a>
-              </div>
-            </div>
-
-
-          </div>
-        </motion.div>
+        {
+          filteredProjects.map((item, index) => (
+            <Project
+              imgsrc={item.imgsrc}
+              ProjectName={item.ProjectName}
+              description={item.description}
+              technologies={item.technologies}
+              link={item.link}
+            />
+          ))
+        }
 
 
 
